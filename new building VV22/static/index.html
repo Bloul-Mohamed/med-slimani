@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedSearch</title>
+  <!-- page icon -->
+  <link rel="shortcut icon" href="/static/image/heartbeat-solid.svg" type="image/x-icon">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- auth section (hidden until signing in) -->
+  <div class="auth-section" id="authSection" style="display:none;">
+    <!-- Login Form -->
+    <div id="loginForm">
+      <h2>login</h2>
+      <input type="text" id="username" class="form-control mb-2" placeholder="username">
+      <input type="password" id="password" class="form-control mb-2" placeholder="password">
+      <button class="btn btn-primary" onclick="login()">login</button>
+      <div id="error" class="error"></div>
+    </div>
+
+    <!-- Logged-in Info -->
+    <div id="userInfo" style="display:none;">
+      <h3>welcome, <span id="userName"></span></h3>
+      <button class="btn btn-danger" onclick="logout()">logout</button>
+    </div>
+  </div>
+
+  <!-- header -->
+  <div class="header">
+    
+    <a href="#" class="logo"><i class="fas fa-heartbeat"></i> medsearch</a>
+      <div id="menu-btn" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="/static/sideeffect.html">side effect checker</a>
+      <a href="/static/crossintr.html">interaction tool</a>
+      <a href="/static/litreview.html">literature retrieval</a>
+      <!-- sign in / sign out -->
+       <a href="/static/login.html" id="signinLink">sign in</a>
+      <a href="/static/register.html" id="signupLink">sign up</a>
+      <a href="#" id="logoutLink" style="display:none;" onclick="logout()">log out</a>
+      <span id="navUserName" style="display:none; margin-left:1em;   color: green;  font-weight: bold;"></span>
+    </nav>
+  </div>
+
+  <!-- home -->
+  <section class="home" id="home">
+    <div class="image">
+      <img src="/static/image/home-img.svg" alt="healthcare illustration">
+    </div>
+    <div class="content">
+      <h3>your trusted drug safety companion</h3>
+      <p>medsearch gives you quick access to reliable drug info, safety profiles, and research.</p>
+      <a href="#services" class="targett btn">get started <span class="fas fa-chevron-right"></span></a>
+    </div>
+  </section>
+
+  <!-- icons -->
+  <section class="icons-container">
+    <div class="icons">
+      <i class="fas fa-file-medical-alt"></i>
+      <h3>10+ million</h3>
+      <p>articles indexed</p>
+    </div>
+    <div class="icons">
+      <i class="fas fa-notes-medical"></i>
+      <h3>140,000+</h3>
+      <p>adverse events</p>
+    </div>
+    <div class="icons">
+      <i class="fas fa-pills"></i>
+      <h3>130,000+</h3>
+      <p>drug-effect pairs</p>
+    </div>
+    <div class="icons">
+      <i class="fas fa-book"></i>
+      <h3>38+ million</h3>
+      <p>clinical citations</p>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section class="services" id="services">
+    <h1 class="heading">our <span>services</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-heartbeat"></i>
+        <h3>side effect checker</h3>
+        <p>see potential side effects using clinical data.</p>
+        <a href="/static/sideeffect.html" class="targe2t btn">try <span class="fas fa-chevron-right"></span></a>
+      </div>
+      <div class="box">
+        <i class="fas fa-exchange-alt"></i>
+        <h3>interaction tool</h3>
+        <p>check drug interactions for safer regimens.</p>
+        <a href="/static/crossintr.html" class="targe2t btn">try <span class="fas fa-chevron-right"></span></a>
+      </div>
+      <div class="box">
+        <i class="fas fa-search"></i>
+        <h3>literature retrieval</h3>
+        <p>find peer-reviewed studies and trials.</p>
+        <a href="/static/litreview.html" class="targe2t btn">try <span class="fas fa-chevron-right"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+    <div class="row">
+      <div class="image">
+        <img src="/static/image/medication2.png" alt="medication image">
+      </div>
+      <div class="content">
+        <h3>committed to your safety</h3>
+        <p>we provide evidence-based drug info to help you make informed decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#home">home</a>
+        <a href="/static/sideeffect.html">side effect checker</a>
+        <a href="/static/crossintr.html">interaction tool</a>
+        <a href="/static/litreview.html">literature retrieval</a>
+        
+      </div>
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="mailto:info@medsearch.com"><i class="fas fa-envelope"></i> info@medsearch.com</a>
+        <a href="mailto:support@medsearch.com"><i class="fas fa-envelope"></i> support@medsearch.com</a>
+      </div>
+    </div>
+    <div class="credit">&copy; 2025 medsearch</div>
+  </section>
+<script src="/static/js/index.js"></script>
+  
+</body>
+</html>

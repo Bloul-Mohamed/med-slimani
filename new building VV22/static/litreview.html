@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedSearch | drug side effect tool</title>
+  
+  <link rel="shortcut icon" href="/static/image/heartbeat-solid.svg" type="image/x-icon">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  
+  <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+
+  <!-- header -->
+  <div class="header">
+    <a href="/static/index.html" class="logo"><i class="fas fa-heartbeat"></i> MedSearch.</a>
+    <nav class="navbar">
+      <a href="/static/index.html">home</a>
+      <a href="/static/sideeffect.html">side effect checker</a>
+      <a href="/static/crossintr.html">interaction tool</a>
+      <a href="/static/litreview.html">literature retrieval</a>
+      <a href="/static/login.html" id="signinLink">sign in</a>
+      <a href="/static/register.html" id="signupLink">sign up</a>
+      <a href="#" id="logoutLink" style="display:none;" onclick="logout()">log out</a>
+      <span id="navUserName" style="display:none; margin-left:1em; color: green; font-weight: bold;"></span>
+    </nav>
+  </div>
+
+  <!-- main tool -->
+  <section class="home" id="home">
+    <div class="content">
+      <section class="checker">
+        <form id="pubmedForm" class="form-wrapper">
+          <input type="text" id="pubmedInput" name="medication" placeholder="enter medication name…" required list="pubmedList" class="targett">
+          <datalist id="pubmedList"></datalist>
+          <button type="submit" class="btn">check literature <span>→</span></button>
+        </form>
+      </section>
+      <section class="results">
+        <div id="pubmedResults"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="/static/index.html">home</a>
+        <a href="/static/sideeffect.html">drug side effect tool</a>
+        <a href="/static/crossintr.html">cross-interaction tool</a>
+        <a href="/static/litreview.html">literature retrieval</a>
+        <a href="#" id="logoutLinkFooter" style="display:none;" onclick="logout()">log out</a>
+      </div>
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="mailto:info@medsearch.com"><i class="fas fa-envelope"></i> info@medsearch.com</a>
+        <a href="mailto:support@medsearch.com"><i class="fas fa-envelope"></i> support@medsearch.com</a>
+      </div>
+    </div>
+    <div class="credit">&copy; 2025 medsearch</div>
+  </section>
+
+
+   <script src="/static/js/litreview.js"></script>
+ 
+</body>
+</html>
