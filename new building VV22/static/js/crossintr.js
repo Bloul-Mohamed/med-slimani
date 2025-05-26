@@ -84,7 +84,7 @@ document.querySelectorAll('input[list]').forEach(input => {  // attach datalist
 
 
 // This is a free tier Unlimited use key only
-const API_KEY='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';
+const API_KEY='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';
 
 async function correctDrugName(rawName) {  // fix typos
   const prompt = `Correct any typos in this drug name and return ONLY the corrected name: ${rawName}`;

@@ -71,7 +71,7 @@
     
     
     //This is a free tier Unlimited use key only 
- const API_KEY = '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';  
+ const API_KEY = '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';  
     async function correctDrugName(rawName) {  // typo fix
       const prompt = `Correct any typos in this drug name and return ONLY the corrected name, with no extra text: ${rawName}`;  // prompt
       try {
